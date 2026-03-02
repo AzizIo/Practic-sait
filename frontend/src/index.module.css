@@ -35,7 +35,6 @@ nav {
     color: black;
     position: relative;
     z-index: 100;
-    padding-top: 30px;
 }
 
 .nav_logo img {
@@ -69,3 +68,88 @@ nav {
 
     
 }
+
+main{
+    background-color: #F3F2F2;
+    background-size: cover;
+    height: 100vh;
+}
+
+.container{
+    margin-left: 158px;
+}
+
+.main_title {
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 50px;
+    font-size: 130px;
+    font-weight: 700;
+    line-height: 130px;
+    background: linear-gradient(90deg, #020039, #362FFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* для Firefox */
+    background-clip: text;
+    color: transparent;
+}
+
+.main_title2{
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 50px;
+    font-size: 130px;
+    font-weight: 700;
+    line-height: 130px;
+    background: linear-gradient(90deg, #020039, #362FFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* для Firefox */
+    background-clip: text;
+    color: transparent;
+}
+
+
+
+.start_bth{
+    width: 526px;
+    height: 108px;
+}
+
+.bth{
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    font-size: 35px;
+    font-weight: 600;
+    color: white;
+    padding: 33px 98px;
+    background: linear-gradient(90deg, #020039, #362FFF);
+    border-radius: 50px;
+    text-decoration: none;
+}
+
+.soc_seti{
+    padding-top: 30px;
+    color: white;
+}
+
+.seti{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 526px;
+    height: 122px;
+    padding: 25px 25px;
+    background: linear-gradient(135deg, #DB4500, #FF5A2F);
+    box-shadow: 0 8px 20px rgba(219, 69, 0, 0.35);
+    transition: all 0.25s ease;
+    border-radius: 20px;
+
+}
+.bt{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+}
+
