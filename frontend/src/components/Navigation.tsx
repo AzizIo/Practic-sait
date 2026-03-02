@@ -1,27 +1,35 @@
-import styles from '/src/index.module.css'
+import { NavLink } from "react-router-dom";
+import styles from "./Navigation.module.css";
+import logo from "../assets/logo.png"; // путь к логотипу
 
-function nav() {
-    return (
-        <>
-            <nav className={styles.nav}> 
-                <div className={styles.nav_logo} >
-                    <img src="/src/assets/logo.png" alt="logo" />
-                </div>
-                <div>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div className={styles.nav_items} id="navItems">
-                    <a className={styles.navs} href="main.html">Главная</a>
-                    <a className={styles.navs} href="about.html">Почему мы?</a>
-                    <a className={styles.navs} href="specialties.html">Специальности</a>
-                    <a className={styles.navs} href="gallery.html">Галерея</a>
-                    <a className={styles.navs} href="contacts.html">Контакты</a>
-                </div>
-            </nav>
-        </>
-    )
+export default function Navigation() {
+  return (
+    <header className={styles.header}>
+      <div className={styles.brand}>
+        <img src={logo} alt="logo" className={styles.logo} />
+      </div>
+
+      <nav className={styles.nav}>
+        <NavLink className={styles.link} to="/">
+          Главная
+        </NavLink>
+
+        <a className={styles.link} href="#why">
+          Почему мы?
+        </a>
+
+        <a className={styles.link} href="#spec">
+          Специальности
+        </a>
+
+        <NavLink className={styles.link} to="/gallery">
+          Галерея
+        </NavLink>
+
+        <a className={styles.link} href="#contacts">
+          Контакты
+        </a>
+      </nav>
+    </header>
+  );
 }
-
-export default nav

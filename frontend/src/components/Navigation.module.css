@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 39px;
+  padding-top: 30px;
+  color: black;
+  position: relative;
+  z-index: 100;
+}
+
+/* логотип-блок слева */
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* если у тебя нет картинки — просто квадрат как плейсхолдер */
+.logo {
+  width: auto;
+  height: 50px;
+  object-fit: contain;
+  display: block;
+}
+
+/* IT.МОСКВА */
+.title {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+/* контейнер ссылок */
+.nav {
+  display: flex;
+  gap: 87px;
+  align-items: center;
+}
+
+/* ссылки */
+.link {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.link:hover {
+  background: linear-gradient(90deg, #020039, #362fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  background-clip: text;
+  color: transparent;
+}
