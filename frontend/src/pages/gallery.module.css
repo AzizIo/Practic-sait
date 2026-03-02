@@ -1,0 +1,88 @@
+.page {
+  min-height: 100vh;
+}
+
+.container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+  padding: 24px 16px 48px;
+}
+
+.title {
+  margin: 12px 0 16px;
+  font-size: 32px;
+  font-weight: 900;
+  color: #1f2a8a;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.tab {
+  border: 1px solid rgba(31, 42, 138, 0.18);
+  background: #fff;
+  color: #111827;
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.tabActive {
+  background: linear-gradient(180deg, #1f2a8a, #0b1a63);
+  border-color: transparent;
+  color: #fff;
+}
+
+.grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+  background: #fff;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.img {
+  height: 180px;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(ellipse at 30% 30%, rgba(31, 42, 138, 0.16), rgba(255, 255, 255, 0) 60%),
+    radial-gradient(ellipse at 70% 70%, rgba(239, 123, 45, 0.14), rgba(255, 255, 255, 0) 60%);
+  border-bottom: 1px dashed rgba(31, 42, 138, 0.25);
+}
+
+.imgText {
+  font-weight: 900;
+  color: rgba(17, 24, 39, 0.6);
+  letter-spacing: 0.5px;
+}
+
+.caption {
+  padding: 12px 12px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(17, 24, 39, 0.86);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
