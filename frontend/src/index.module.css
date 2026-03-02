@@ -1,0 +1,59 @@
+@font-face {
+    font-family: 'ArialCustom';
+    src: url('../fonts/arialmt.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'ArialCustom';
+    src: url('../fonts/arial_bolditalicmt.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
+.nav-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 39px;
+    color: black;
+    position: relative;
+    z-index: 100;
+}
+
+.nav_logo img {
+    height: 67px
+}
+
+.nav_items {
+    padding-left: 165px;
+    display: flex;
+    gap: 82px;
+}
+
+.navs {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none; /* убираем подчеркивание */
+    color: inherit;        /* цвет текста наследуется */
+    cursor: pointer;
+    cursor: pointer;
+    font-size: 22px;
+    font-weight: 600;
+    
+}
