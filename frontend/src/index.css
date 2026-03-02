@@ -2,7 +2,7 @@
 html, body { height: 100%; }
 body {
   margin: 0;
-  background: #eef1f6;
+  background: #f3f2f2;
   color: #111;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -127,4 +127,95 @@ body {
   .imagePlaceholder {
     height: 300px;
   }
+
+/* ВАЖНО: убери левый сдвиг, он ломает макет */
+.container { margin-left: 0; }
+
+/* Серый фон на всю ширину */
+.heroStripe{
+  background: #F3F2F2;
+}
+
+/* Контент по центру */
+.heroWrap {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 50px 24px;
+
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* две колонки */
+  align-items: center;
+  gap: 40px;
+}
+
+/* Правая часть */
+.heroRight{
+  display: grid;
+  place-items: center;
+}
+
+/* Плейсхолдер с “светом” как вокруг робота */
+.heroArtPlaceholder{
+  width: min(520px, 100%);
+  height: 420px;
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 55% 45%, rgba(120, 170, 255, 0.35), rgba(0,0,0,0) 55%),
+    radial-gradient(circle at 70% 30%, rgba(170, 140, 255, 0.25), rgba(0,0,0,0) 45%),
+    radial-gradient(circle at 40% 65%, rgba(255, 255, 255, 0.7), rgba(0,0,0,0) 60%);
+  border: 2px dashed rgba(2,0,57,0.22);
+  display: grid;
+  place-items: center;
+  font-weight: 800;
+  color: rgba(17,24,39,0.55);
+}
+
+/* Кнопки соцсетей справа */
+.socialBtns{
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.socialBtn{
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 48px;
+  border-radius: 14px;
+  background: #fff;
+  color: #111;
+  text-decoration: none;
+  font-weight: 900;
+}
+
+/* Адаптив */
+@media (max-width: 1050px){
+  .heroArtPlaceholder{
+    height: 320px;
+  }
+}
+.heroLeft {
+  max-width: 620px;
+}
+.heroRight {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroArt {
+  max-width: 520px;
+  width: 100%;
+  height: auto;
+}
+.socialIconBtn {
+  transition: transform 160ms ease, box-shadow 160ms ease;
+  will-change: transform;
+}
+
+.socialIconBtn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+}
 }
