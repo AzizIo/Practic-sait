@@ -57,3 +57,15 @@ nav {
     font-weight: 600;
     
 }
+
+.navs:hover{
+    background: linear-gradient(90deg, #020039, #362FFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* для Firefox */
+    background-clip: text;
+    color: transparent;
+
+    
+}
