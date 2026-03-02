@@ -2,57 +2,41 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 14px 39px;
-  padding-top: 30px;
-  color: black;
-  position: relative;
-  z-index: 100;
+  gap: 16px;
+
+  padding: 18px 24px;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(17, 24, 39, 0.08);
 }
 
-/* логотип-блок слева */
 .brand {
   display: flex;
   align-items: center;
-  gap: 12px;
 }
 
-/* если у тебя нет картинки — просто квадрат как плейсхолдер */
 .logo {
+  height: 44px;
   width: auto;
-  height: 50px;
   object-fit: contain;
   display: block;
 }
 
-/* IT.МОСКВА */
-.title {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 22px;
-  font-weight: 700;
-}
-
-/* контейнер ссылок */
 .nav {
   display: flex;
-  gap: 87px;
+  gap: 44px;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
 }
 
-/* ссылки */
 .link {
   font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #111;
   text-decoration: none;
-  color: inherit;
-  cursor: pointer;
-  font-size: 22px;
-  font-weight: 600;
 }
 
 .link:hover {
-  background: linear-gradient(90deg, #020039, #362fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  background-clip: text;
-  color: transparent;
+  text-decoration: underline;
 }

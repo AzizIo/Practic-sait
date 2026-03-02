@@ -1,155 +1,130 @@
-@font-face {
-    font-family: 'ArialCustom';
-    src: url('../fonts/arialmt.ttf') format('truetype');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+/* фон страницы */
+html, body { height: 100%; }
+body {
+  margin: 0;
+  background: #eef1f6;
+  color: #111;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-@font-face {
-    font-family: 'ArialCustom';
-    src: url('../fonts/arial_bolditalicmt.ttf') format('truetype');
-    font-weight: 700;
-    font-style: italic;
-    font-display: swap;
+.app {
+  min-height: 100vh;
+  padding: 0;              /* убираем внешние поля */
+  display: block;
 }
 
-
-
-.nav-overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 998;
+.card {
+  width: 100%;             /* на всю ширину */
+  min-height: 100vh;       /* на всю высоту */
+  background: #ffffff;
+  border: 0;               /* убираем рамку */
+  border-radius: 0;        /* убираем скругления */
+  overflow: hidden;
+  box-shadow: none;        /* убираем тень */
 }
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 14px 39px;
-    color: black;
-    position: relative;
-    z-index: 100;
+/* hero-секция (серая область внутри карточки, НЕ на всю ширину экрана) */
+.hero {
+  background: #f3f2f2;
+  padding: 48px 56px;
+
+  /* ВАЖНО: ограничиваем только контент, но фон на всю ширину */
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 28px;
+  align-items: center;
 }
 
-.nav_logo img {
-    height: 67px
-}
-
-.nav_items {
-    display: flex;
-    gap: 87px;
-}
-
-.navs {
-    font-family: Arial, Helvetica, sans-serif;
-    text-decoration: none; /* убираем подчеркивание */
-    color: inherit;        /* цвет текста наследуется */
-    cursor: pointer;
-    cursor: pointer;
-    font-size: 22px;
-    font-weight: 600;
-    
-}
-
-.navs:hover{
-    background: linear-gradient(90deg, #020039, #362FFF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    /* для Firefox */
-    background-clip: text;
-    color: transparent;
-
-    
-}
-
-main{
-    background-color: #F3F2F2;
-    background-size: cover;
-    height: 100vh;
-}
-
-.container{
-    margin-left: 158px;
-}
-
+/* заголовок */
 .main_title {
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 50px;
-    font-size: 130px;
-    font-weight: 700;
-    line-height: 130px;
-    background: linear-gradient(90deg, #020039, #362FFF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    /* для Firefox */
-    background-clip: text;
-    color: transparent;
+  margin: 0 0 26px;
+  font-size: 110px;
+  line-height: 0.95;
+  font-weight: 900;
+  color: #0b1a63;
 }
 
-.main_title2{
-    display: none;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-top: 50px;
-    font-size: 130px;
-    font-weight: 700;
-    line-height: 130px;
-    background: linear-gradient(90deg, #020039, #362FFF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    /* для Firefox */
-    background-clip: text;
-    color: transparent;
+/* кнопка */
+.bth {
+  display: inline-block;
+  padding: 22px 56px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #020039, #362fff);
 }
 
-
-
-.start_bth{
-    width: 526px;
-    height: 108px;
+/* соцсети */
+.seti {
+  margin-top: 26px;
+  width: min(520px, 100%);
+  padding: 18px 18px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #db4500, #ff5a2f);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(219, 69, 0, 0.35);
 }
 
-.bth{
-    font-family: Arial, Helvetica, sans-serif;
-    display: inline-block;
-    font-size: 35px;
-    font-weight: 600;
-    color: white;
-    padding: 33px 98px;
-    background: linear-gradient(90deg, #020039, #362FFF);
-    border-radius: 50px;
-    text-decoration: none;
+.bt {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.1;
 }
 
-.soc_seti{
-    padding-top: 30px;
-    color: white;
+.socialBtns {
+  display: flex;
+  gap: 12px;
 }
 
-.seti{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 526px;
-    height: 122px;
-    padding: 25px 25px;
-    background: linear-gradient(135deg, #DB4500, #FF5A2F);
-    box-shadow: 0 8px 20px rgba(219, 69, 0, 0.35);
-    transition: all 0.25s ease;
-    border-radius: 20px;
-
-}
-.bt{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    font-weight: 600;
+.socialBtn {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 48px;
+  border-radius: 14px;
+  background: #fff;
+  color: #111;
+  text-decoration: none;
+  font-weight: 900;
 }
 
+/* справа плейсхолдер под картинку */
+.heroRight {
+  display: grid;
+  place-items: center;
+}
+
+.imagePlaceholder {
+  width: min(520px, 100%);
+  height: 420px;
+  border-radius: 26px;
+  border: 2px dashed rgba(2, 0, 57, 0.22);
+  background: rgba(255, 255, 255, 0.4);
+  display: grid;
+  place-items: center;
+  font-weight: 900;
+  color: rgba(17, 24, 39, 0.6);
+}
+
+/* адаптив */
+@media (max-width: 1050px) {
+  .hero {
+    grid-template-columns: 1fr;
+    padding: 28px 22px;
+  }
+  .main_title {
+    font-size: 72px;
+  }
+  .imagePlaceholder {
+    height: 300px;
+  }
+}

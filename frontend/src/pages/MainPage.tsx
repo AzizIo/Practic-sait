@@ -2,37 +2,61 @@ import Navigation from "../components/Navigation";
 
 export default function MainPage() {
   return (
-    <>
+    <div className="page">
       <Navigation />
-      <main className="container">
-        <h1 className="main_title">
-          Колледж <br />
-          с добрым <br />
-          сердцем!
-        </h1>
 
-        <div className="start_bth">
-          <a className="bth" href="#spec">
-            Хочу поступить
-          </a>
-        </div>
+      {/* Полоса на всю ширину */}
+      <main className="heroStripe">
+        {/* Контент по центру */}
+        <section className="hero">
+          {/* Левая часть */}
+          <div className="heroLeft">
+            <h1 className="main_title">
+              Колледж <br />
+              с добрым <br />
+              сердцем!
+            </h1>
 
-        <div className="soc_seti">
-          <div className="seti">
-            <div className="bt">
-              Подпишись <br /> на наши соцсети
-            </div>
-            <div style={{ display: "flex", gap: 12 }}>
-              <a className="navs" href="https://t.me" target="_blank" rel="noreferrer">
-                TG
-              </a>
-              <a className="navs" href="https://vk.com" target="_blank" rel="noreferrer">
-                VK
-              </a>
+            <a className="bth" href="#spec">
+              Начать экскурсию
+            </a>
+
+            <div className="seti">
+              <div className="bt">
+                Подпишись <br />
+                на наши соцсети
+              </div>
+
+              <div className="socialBtns">
+                <a
+                  className="socialBtn"
+                  href="https://t.me"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  TG
+                </a>
+
+                <a
+                  className="socialBtn"
+                  href="https://vk.com"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  VK
+                </a>
+              </div>
             </div>
           </div>
-        </div>
+
+          {/* Правая часть — место под изображение */}
+          <div className="heroRight">
+            <div className="imagePlaceholder">
+              Место для фото
+            </div>
+          </div>
+        </section>
       </main>
-    </>
+    </div>
   );
 }
