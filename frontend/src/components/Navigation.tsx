@@ -1,12 +1,12 @@
 import { NavLink } from "react-router-dom";
 import styles from "./Navigation.module.css";
-import logo from "../assets/logo.png"; // путь к логотипу
+import logo from "../assets/logo.png";
 
 export default function Navigation() {
   return (
     <header className={styles.header}>
       <div className={styles.brand}>
-        <img src={logo} alt="logo" className={styles.logo} />
+        <img className={styles.logo} src={logo} alt="logo" />
       </div>
 
       <nav className={styles.nav}>
@@ -26,9 +26,9 @@ export default function Navigation() {
           Галерея
         </NavLink>
 
-        <a className={styles.link} href="#contacts">
+        <NavLink className={styles.link} to="/contacts">
           Контакты
-        </a>
+        </NavLink>
       </nav>
     </header>
   );
