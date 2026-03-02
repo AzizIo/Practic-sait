@@ -35,6 +35,7 @@ nav {
     color: black;
     position: relative;
     z-index: 100;
+    padding-top: 30px;
 }
 
 .nav_logo img {
@@ -42,9 +43,8 @@ nav {
 }
 
 .nav_items {
-    padding-left: 165px;
     display: flex;
-    gap: 82px;
+    gap: 87px;
 }
 
 .navs {

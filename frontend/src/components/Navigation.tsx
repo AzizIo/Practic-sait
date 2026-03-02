@@ -5,7 +5,7 @@ function nav() {
         <>
             <nav className={styles.nav}> 
                 <div className={styles.nav_logo} >
-                    <img src="" alt="logo" />
+                    <img src="/src/assets/logo.png" alt="logo" />
                 </div>
                 <div>
                     <span></span>
