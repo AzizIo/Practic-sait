@@ -35,7 +35,6 @@ export default function Navigation() {
           </NavLink>
         </nav>
 
-        {/* симметрия, чтобы меню оставалось по центру */}
         <div className={styles.spacer} />
       </div>
     </header>
