@@ -1,88 +1,119 @@
 .page {
   min-height: 100vh;
+  background: #f3f2f2; /* как на главной */
 }
 
-.container {
-  width: min(1100px, 100%);
+.main {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: flex-start;
+  padding: 48px 0 80px;
+}
+
+.wrap {
+  width: min(1200px, 100%);
   margin: 0 auto;
-  padding: 24px 16px 48px;
+  padding: 0 24px;
 }
 
 .title {
-  margin: 12px 0 16px;
-  font-size: 32px;
+  margin: 0 0 26px;
+  font-size: 44px;
   font-weight: 900;
-  color: #1f2a8a;
-}
+  letter-spacing: -0.02em;
 
-.tabs {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 18px;
-}
-
-.tab {
-  border: 1px solid rgba(31, 42, 138, 0.18);
-  background: #fff;
-  color: #111827;
-  padding: 10px 14px;
-  border-radius: 999px;
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 14px;
-}
-
-.tabActive {
-  background: linear-gradient(180deg, #1f2a8a, #0b1a63);
-  border-color: transparent;
-  color: #fff;
-}
-
-.grid {
-  display: grid;
-  gap: 14px;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  /* как в твоём стиле — синий акцент */
+  color: #0b1a63;
+  text-decoration: underline;
+  text-decoration-thickness: 6px;
+  text-underline-offset: 6px;
 }
 
 .card {
   background: #fff;
-  border: 1px solid rgba(17, 24, 39, 0.08);
-  border-radius: 16px;
-  overflow: hidden;
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 16px 36px rgba(17, 24, 39, 0.12);
 }
 
-.img {
-  height: 180px;
+.grid {
   display: grid;
-  place-items: center;
-  background:
-    radial-gradient(ellipse at 30% 30%, rgba(31, 42, 138, 0.16), rgba(255, 255, 255, 0) 60%),
-    radial-gradient(ellipse at 70% 70%, rgba(239, 123, 45, 0.14), rgba(255, 255, 255, 0) 60%);
-  border-bottom: 1px dashed rgba(31, 42, 138, 0.25);
+  gap: 22px;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.imgText {
-  font-weight: 900;
-  color: rgba(17, 24, 39, 0.6);
-  letter-spacing: 0.5px;
+/* карточка картинки */
+.item {
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  border-radius: 18px;
+  background: #f7f7f7;
+  box-shadow: 0 10px 24px rgba(17, 24, 39, 0.10);
 }
 
+/* изображение */
+.img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  display: block;
+  transform: scale(1);
+  transition: transform 0.35s cubic-bezier(.22,1,.36,1), filter 0.35s ease;
+}
+
+/* подпись (выезжает снизу) */
 .caption {
-  padding: 12px 12px 14px;
-  font-size: 14px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 14px 14px;
+  font-size: 16px;
   font-weight: 700;
-  color: rgba(17, 24, 39, 0.86);
+  color: #fff;
+
+  transform: translateY(100%);
+  transition: transform 0.35s cubic-bezier(.22,1,.36,1);
+
+  /* затемнение снизу поверх картинки */
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.55) 55%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
 }
 
-@media (max-width: 900px) {
+/* hover эффекты */
+.item:hover .img {
+  transform: scale(1.06);
+  filter: contrast(1.02) saturate(1.05);
+}
+
+.item:hover .caption {
+  transform: translateY(0);
+}
+
+/* адаптив */
+@media (max-width: 1050px) {
   .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .img {
+    height: 220px;
   }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 640px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+  .img {
+    height: 220px;
+  }
+  .card {
+    padding: 18px;
   }
 }
