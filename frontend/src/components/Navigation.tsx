@@ -9,9 +9,10 @@ export default function Navigation() {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
-        <div className={styles.brand}>
+        <NavLink to="/" className={styles.logoLink}>
           <img className={styles.logo} src={logo} alt="IT.MOSKVA" />
-        </div>
+        </NavLink>
+        
 
         <nav className={styles.nav} aria-label="Главное меню">
           <NavLink className={linkClass} to="/">
