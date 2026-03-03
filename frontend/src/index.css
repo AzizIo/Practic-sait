@@ -1,5 +1,12 @@
-/* фон страницы */
-html, body { height: 100%; }
+/* =========================
+   Глобальные стили
+========================= */
+
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   background: #f3f2f2;
@@ -7,197 +14,29 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.app {
-  min-height: 100vh;
-  padding: 0;              /* убираем внешние поля */
-  display: block;
-}
+/* =========================
+   Hero секция
+========================= */
 
-.card {
-  width: 100%;             /* на всю ширину */
-  min-height: 100vh;       /* на всю высоту */
-  background: #ffffff;
-  border: 0;               /* убираем рамку */
-  border-radius: 0;        /* убираем скругления */
-  overflow: hidden;
-  box-shadow: none;        /* убираем тень */
-}
-
-/* hero-секция (серая область внутри карточки, НЕ на всю ширину экрана) */
-.hero {
+.heroStripe {
   background: #f3f2f2;
-  padding: 48px 56px;
-
-  /* ВАЖНО: ограничиваем только контент, но фон на всю ширину */
-  max-width: 1200px;
-  margin: 0 auto;
-
-  display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
-  gap: 28px;
-  align-items: center;
 }
 
-/* заголовок */
-.main_title {
-  margin: 0 0 26px;
-  font-size: 110px;
-  line-height: 0.95;
-  font-weight: 900;
-  color: #0b1a63;
-}
-
-/* кнопка */
-.bth {
-  display: inline-block;
-  padding: 22px 56px;
-  border-radius: 999px;
-  text-decoration: none;
-  color: #fff;
-  font-size: 24px;
-  font-weight: 800;
-  background: linear-gradient(90deg, #020039, #362fff);
-}
-
-/* соцсети */
-.seti {
-  margin-top: 26px;
-  width: min(520px, 100%);
-  padding: 18px 18px;
-  border-radius: 18px;
-  background: linear-gradient(135deg, #db4500, #ff5a2f);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  color: #fff;
-  box-shadow: 0 8px 20px rgba(219, 69, 0, 0.35);
-}
-
-.bt {
-  font-size: 22px;
-  font-weight: 800;
-  line-height: 1.1;
-}
-
-.socialBtns {
-  display: flex;
-  gap: 12px;
-}
-
-.socialBtn {
-  display: grid;
-  place-items: center;
-  width: 54px;
-  height: 48px;
-  border-radius: 14px;
-  background: #fff;
-  color: #111;
-  text-decoration: none;
-  font-weight: 900;
-}
-
-/* справа плейсхолдер под картинку */
-.heroRight {
-  display: grid;
-  place-items: center;
-}
-
-.imagePlaceholder {
-  width: min(520px, 100%);
-  height: 420px;
-  border-radius: 26px;
-  border: 2px dashed rgba(2, 0, 57, 0.22);
-  background: rgba(255, 255, 255, 0.4);
-  display: grid;
-  place-items: center;
-  font-weight: 900;
-  color: rgba(17, 24, 39, 0.6);
-}
-
-/* адаптив */
-@media (max-width: 1050px) {
-  .hero {
-    grid-template-columns: 1fr;
-    padding: 28px 22px;
-  }
-  .main_title {
-    font-size: 72px;
-  }
-  .imagePlaceholder {
-    height: 300px;
-  }
-
-/* ВАЖНО: убери левый сдвиг, он ломает макет */
-.container { margin-left: 0; }
-
-/* Серый фон на всю ширину */
-.heroStripe{
-  background: #F3F2F2;
-}
-
-/* Контент по центру */
 .heroWrap {
   width: min(1200px, 100%);
   margin: 0 auto;
   padding: 50px 24px;
 
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr; /* две колонки */
-  align-items: center;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 40px;
-}
-
-/* Правая часть */
-.heroRight{
-  display: grid;
-  place-items: center;
-}
-
-/* Плейсхолдер с “светом” как вокруг робота */
-.heroArtPlaceholder{
-  width: min(520px, 100%);
-  height: 420px;
-  border-radius: 26px;
-  background:
-    radial-gradient(circle at 55% 45%, rgba(120, 170, 255, 0.35), rgba(0,0,0,0) 55%),
-    radial-gradient(circle at 70% 30%, rgba(170, 140, 255, 0.25), rgba(0,0,0,0) 45%),
-    radial-gradient(circle at 40% 65%, rgba(255, 255, 255, 0.7), rgba(0,0,0,0) 60%);
-  border: 2px dashed rgba(2,0,57,0.22);
-  display: grid;
-  place-items: center;
-  font-weight: 800;
-  color: rgba(17,24,39,0.55);
-}
-
-/* Кнопки соцсетей справа */
-.socialBtns{
-  display: flex;
-  gap: 12px;
   align-items: center;
 }
 
-.socialBtn{
-  display: grid;
-  place-items: center;
-  width: 54px;
-  height: 48px;
-  border-radius: 14px;
-  background: #fff;
-  color: #111;
-  text-decoration: none;
-  font-weight: 900;
-}
-
-/* Адаптив */
-@media (max-width: 1050px){
-  .heroArtPlaceholder{
-    height: 320px;
-  }
-}
 .heroLeft {
   max-width: 620px;
 }
+
 .heroRight {
   display: flex;
   justify-content: center;
@@ -209,13 +48,128 @@ body {
   width: 100%;
   height: auto;
 }
+
+/* =========================
+   Заголовок
+========================= */
+
+.main_title {
+  margin: 0 0 26px;
+  font-size: 110px;
+  line-height: 0.95;
+  font-weight: 900;
+  letter-spacing: -0.02em;
+}
+
+/* =========================
+   Кнопка
+========================= */
+
+.bth {
+  display: inline-block;
+  padding: 22px 56px;
+  border-radius: 999px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 800;
+  background: linear-gradient(90deg, #020039, #362fff);
+}
+
+/* =========================
+   Блок соцсетей
+========================= */
+
+.seti {
+  margin-top: 24px;
+
+  width: fit-content;          /* не растягивается лишнего */
+  max-width: 500px;
+
+  padding: 18px 24px;
+  border-radius: 16px;
+
+  background: linear-gradient(135deg, #db4500, #ff5a2f);
+
+  display: flex;
+  align-items: center;
+  gap: 28px;                   /* расстояние между текстом и иконками */
+
+  color: #fff;
+  box-shadow: 0 10px 24px rgba(219, 69, 0, 0.28);
+}
+
+.bt {
+  font-size: 22px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+/* =========================
+   Соц кнопки (VK / TG)
+========================= */
+
+.socialBtns{
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 14px !important;
+  flex-wrap: nowrap !important;
+
+  /* чтобы гарантированно было справа */
+  margin-left: auto;
+}
+
+/* сама кнопка */
 .socialIconBtn {
-  transition: transform 160ms ease, box-shadow 160ms ease;
+  display: grid;
+  place-items: center;
+
+  width: 64px;
+  height: 64px;
+
+  background: #ffffff;
+  border-radius: 16px;
+  text-decoration: none;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
   will-change: transform;
 }
 
+/* hover эффект */
 .socialIconBtn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.15);
+  transform: translateY(-4px) scale(1.12);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
 }
+
+/* иконка */
+.socialIconBtn img {
+  width: 36px;
+  height: 36px;
+  display: block;
+  transition: transform 0.25s ease;
+}
+
+.socialIconBtn:hover img {
+  transform: scale(1.08);
+}
+
+/* =========================
+   Адаптив
+========================= */
+
+@media (max-width: 1050px) {
+  .heroWrap {
+    grid-template-columns: 1fr;
+    padding: 28px 22px;
+  }
+
+  .main_title {
+    font-size: 72px;
+  }
+
+  .heroArt {
+    max-width: 100%;
+  }
 }
