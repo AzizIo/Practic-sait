@@ -2,10 +2,12 @@
     margin: 30px 40px;
     font-family: 'Inter', sans-serif;
     background-color: white;
+    border-radius: 100px;
 }
 
 .container {
     margin-left: 124px;
+    
 }
 
 .us {
@@ -20,14 +22,50 @@
     linear-gradient: (90deg, #020039, #362FFF);
 }
 
-.p{
+.p {
     font-weight: bold;
 }
 
-.p1{
+.p1 {
     font-weight: 600;
     line-height: 70px;
     font-size: 35px;
+}
 
+.card_block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-left: 75px;
+}
 
+.block {
+    width: 450px;
+    height: 450px;
+    border-radius: 70px;
+
+    background: linear-gradient(135deg, #0702A4, #B9B7FF);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* по вертикали */
+    align-items: center;
+    /* по горизонтали */
+
+    text-align: center;
+    color: white;
+    padding: 10px;
+}
+
+.num {
+    font-size: 90px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+}
+
+.text {
+    font-size: 26px;
+    line-height: 1.4;
+    margin: 0;
 }
