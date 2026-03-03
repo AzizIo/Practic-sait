@@ -141,7 +141,6 @@ export default function CentersPage() {
                     </span>
                   </button>
 
-                  {/* Drawer всегда в DOM -> закрытие плавное */}
                   <div
                     className={`${styles.drawer} ${
                       isActive ? styles.drawerOpen : ""

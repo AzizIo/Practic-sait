@@ -26,7 +26,7 @@
 }
 
 .logo {
-  height: 56px; /* чуть больше */
+  height: 56px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -41,10 +41,9 @@
 }
 
 .spacer {
-  width: 56px; /* баланс справа под размер лого */
+  width: 56px;
 }
 
-/* Ссылка как “кнопка-текст” */
 .link {
   position: relative;
   display: inline-flex;
@@ -68,7 +67,7 @@
   transition: transform 160ms ease;
 }
 
-/* Градиентный hover текста */
+
 .link:hover .linkText {
   background: linear-gradient(90deg, #020039, #362fff);
   -webkit-background-clip: text;
@@ -78,12 +77,10 @@
   color: transparent;
 }
 
-/* Лёгкий “подъём” при hover */
 .link:hover {
   transform: translateY(-1px);
 }
 
-/* Анимированная линия снизу */
 .link::after {
   content: "";
   position: absolute;
@@ -104,7 +101,6 @@
   transform: scaleX(1);
 }
 
-/* Активная страница */
 .active .linkText {
   background: linear-gradient(90deg, #020039, #362fff);
   -webkit-background-clip: text;
@@ -118,14 +114,12 @@
   transform: scaleX(1);
 }
 
-/* Адаптив: на узких экранах уменьшаем gap */
 @media (max-width: 920px) {
   .nav {
     gap: 22px;
   }
 }
 
-/* Ещё меньше экран — текст чуть меньше */
 @media (max-width: 560px) {
   .link {
     font-size: 14px;
