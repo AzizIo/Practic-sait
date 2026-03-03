@@ -19,9 +19,9 @@ export default function Navigation() {
             <span className={styles.linkText}>Главная</span>
           </NavLink>
 
-          <a className={styles.link} href="#why">
+          <NavLink className={linkClass} to="/why-us">
             <span className={styles.linkText}>Почему мы</span>
-          </a>
+          </NavLink>
 
           <NavLink className={linkClass} to="/centers">
             <span className={styles.linkText}>Специальности</span>
