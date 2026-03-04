@@ -6,45 +6,68 @@ import { useState } from 'react';
 
 export default function WhyUs() {
     const advantages = [
-        {
-            id: 1,
-            title: "Центр карьеры и развития ",
-            short: "123",
-            content: "1"
+  {
+    id: 1,
+    title: "Центр карьеры и развития",
+    short: "Трудоустройство",
+    description:
+      "Мы сопровождаем студентов от первого курса до выхода на работу.",
+    checklist: [
+      "Индивидуальные консультации с карьерным экспертом", <br />,,
+      "Помощь в создании резюме и портфолио", <br />,
+      "Подготовка к собеседованиям",<br />,
+      "Стажировки в компаниях-партнёрах",<br />,
+      "Мастер-классы от действующих специалистов", <br />,
+    ],
+    image: "/images/career.jpg"
+  },
 
-        },
-        {
-            id: 2,
-            title: "Современные лаборатории",
-            short: "Новейшее оборудование и ПО",
-            content: `      
-        2
-        2
-        2
-        2
-    `
-        },
-        {
-            id: 3,
-            title: "Будь среди первых",
-            short: "Конкурсы и хакатоны",
-            content: `
-        3
-        3
-        3
-    `
-        },
-        {
-            id: 4,
-            title: "Будь среди первых",
-            short: "Конкурсы и хакатоны",
-            content: `
-        4
-        4
-        4
-    `
-        }
-    ]
+  {
+    id: 2,
+    title: "Современные лаборатории",
+    short: "Кабинеты",
+    description:
+      "Обучение проходит на современном оборудовании с использованием актуального ПО.",
+    checklist: [
+      "Компьютерные классы с профессиональным софтом",
+      "Практика на реальных проектах",
+      "Оборудование последнего поколения",
+      "Доступ к лабораториям вне учебных занятий"
+    ],
+    image: "/images/labs.jpg"
+  },
+
+  {
+    id: 3,
+    title: "Дополнительное образование",
+    short: "Доп. образование",
+    description:
+      "Мы даём больше, чем стандартную программу обучения.",
+    checklist: [
+      "Хакатоны и IT-соревнования",
+      "Проектная деятельность",
+      "Работа в командах",
+      "Развитие soft skills",
+      "Подготовка к олимпиадам"
+    ],
+    image: "/images/education.jpg"
+  },
+
+  {
+    id: 4,
+    title: "Студенческая жизнь и мероприятия",
+    short: "Мероприятия",
+    description:
+      "Активная студенческая жизнь и возможности для самореализации.",
+    checklist: [
+      "Форумы и конференции", <br />,
+      "Встречи с представителями компаний",
+      "Клубы по интересам",
+      "Волонтёрские программы"
+    ],
+    image: "/images/events.jpg"
+  }
+]
     const [activeId, setActiveId] = useState(2);
     const activeItem = advantages.find(item => item.id === activeId)
     return (
@@ -109,6 +132,7 @@ export default function WhyUs() {
                             </p>
                         </div>
                     </div>
+
                 </div>
 
             </div>
@@ -124,15 +148,16 @@ export default function WhyUs() {
                             <div onClick={() => setActiveId(3)} className={styles.b1}>Доп. Образование</div>
                             <div onClick={() => setActiveId(4)} className={styles.b1}>Мероприятия</div>
                         </div>
-                        <div  key={activeId} className={styles.TEXT}>
-                                <div className={styles.title}>
-                                    {activeItem?.title}
-                                </div>
-                                <div className={styles.content}>
-                                    {activeItem?.content}
-                                </div>
-                        </div>
 
+
+                    </div>
+                    <div key={activeId} className={styles.TEXT}>
+                        <div className={styles.title}>
+                            {activeItem?.title}
+                        </div>
+                        <div className={styles.content}>
+                            {activeItem?.checklist}
+                        </div>
                     </div>
                 </div>
 
