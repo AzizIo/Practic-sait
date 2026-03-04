@@ -1,21 +1,19 @@
 import styles from "./Footer.module.css";
-
-import logo from "../assets/logo.png"; // если у тебя лого называется иначе — поменяй путь/имя
+import logo from "../assets/logo.png";
 import tgIcon from "../assets/tg.svg";
 import vkIcon from "../assets/vk.svg";
 
 const COLLEGE_LINKS = [
-  { label: "Центр программирования и безопасности", href: "#" },
-  { label: "Центр городских технологий", href: "#" },
-  { label: "Центр IT.Бирюлево", href: "#" },
-  { label: "Дизайн колледж", href: "#" },
+  { label: "Центр программирования и безопасности", href: "https://vk.com/progsec" },
+  { label: "Центр городских технологий", href: "https://vk.com/urbantec" },
+  { label: "Центр IT.Бирюлево", href: "https://vk.com/itbiryulevo" },
+  { label: "Дизайн колледж", href: "https://vk.com/dsgncollege" },
 ];
 
 export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
-        {/* TOP */}
         <div className={styles.top}>
           <div className={styles.brand}>
             <img className={styles.logo} src={logo} alt="IT.МОСКВА" />
@@ -50,7 +48,6 @@ export default function Footer() {
           </div>
 
           <div className={styles.cols}>
-            {/* Колледж */}
             <div className={styles.col}>
               <div className={styles.colTitle}>Колледж</div>
               <ul className={styles.list}>
@@ -64,7 +61,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* Контакты */}
             <div className={styles.col}>
               <div className={styles.colTitle}>Контакты</div>
 
@@ -108,10 +104,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* DIVIDER */}
         <div className={styles.divider} />
 
-        {/* BOTTOM */}
         <div className={styles.bottom}>
           <div className={styles.copy}>©2026 ГБПОУ IT.МОСКВА</div>
           <div className={styles.rightText}>
