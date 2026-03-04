@@ -18,7 +18,7 @@ export default function MainPage() {
               сердцем!
             </h1>
 
-            <a className="bth" href="#spec">
+            <a className="bth" href="/why-us">
               Начать экскурсию
             </a>
 
@@ -32,7 +32,7 @@ export default function MainPage() {
               <div className="socialBtns">
                 <a
                   className="socialIconBtn"
-                  href="https://t.me"
+                  href="https://t.me/it.moscow1"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Telegram"
@@ -42,7 +42,7 @@ export default function MainPage() {
 
                 <a
                   className="socialIconBtn"
-                  href="https://vk.com"
+                  href="https://vk.com/it.moscowpro"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="VK"
