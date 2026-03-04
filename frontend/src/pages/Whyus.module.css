@@ -11,6 +11,10 @@
 }
 
 .us {
+
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeIn 1s ease forwards;
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 50px;
     font-size: 90px;
@@ -21,15 +25,33 @@
     -webkit-text-fill-color: transparent;
     linear-gradient: (90deg, #020039, #362FFF);
 }
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
 .p {
+    
     font-weight: bold;
 }
 
+
 .p1 {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeIn 1.2s ease forwards;
     font-weight: 600;
     line-height: 50px;
     font-size: 30px;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 .card_block {
@@ -121,16 +143,35 @@
 }
 
 .title {
+
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeIn 1s ease forwards;
     font-size: 60px;
     font-weight: 700;
     margin-bottom: 30px;
 }
 
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .content {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeIn 1.2s ease forwards;
     font-size: 30px;
     line-height: 1.5;
 }
-
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 .bth1 {
     margin-top: 180px;
     display: inline-block;

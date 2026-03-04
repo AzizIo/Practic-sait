@@ -124,15 +124,13 @@ export default function WhyUs() {
                             <div onClick={() => setActiveId(3)} className={styles.b1}>Доп. Образование</div>
                             <div onClick={() => setActiveId(4)} className={styles.b1}>Мероприятия</div>
                         </div>
-                        <div className={styles.TEXT}>
-                            <div className={styles.content}>
+                        <div  key={activeId} className={styles.TEXT}>
                                 <div className={styles.title}>
                                     {activeItem?.title}
                                 </div>
                                 <div className={styles.content}>
                                     {activeItem?.content}
                                 </div>
-                            </div>
                         </div>
 
                     </div>

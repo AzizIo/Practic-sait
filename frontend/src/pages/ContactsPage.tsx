@@ -11,8 +11,8 @@ export default function ContactsPage() {
                 <div className={styles.contact_block}>
 
                     <div className={styles.contact_card}>
-                    <h2 className={styles.contact_card__title}>
-                            Центр программирования<br/>и кибербезопасности
+                        <h2 className={styles.contact_card__title}>
+                            Центр программирования<br />и кибербезопасности
                         </h2>
 
                         <div className={styles.contact_item}>
@@ -122,8 +122,8 @@ export default function ContactsPage() {
 
                         <div className={styles.contact_item}>
                             <span className={styles.label}>Телефон</span>
-                            <a href="tel:+79257596092" className={`${styles.value} ${styles.link}`}/>
-                                +7 (925) 759-60-92
+                            <a href="tel:+79257596092" className={`${styles.value} ${styles.link}`} />
+                            +7 (925) 759-60-92
                         </div>
 
                         <div className={styles.contact_item}>

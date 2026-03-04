@@ -17,13 +17,22 @@
 }
 
 .contact_card {
-    
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s ease forwards;
     max-width: 520px;
     padding: 30px;
     border-radius: 20px;
     background: linear-gradient(135deg, #2b2bd8, #4b6bff);
     color: #ffffff;
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .contact_card__title {
