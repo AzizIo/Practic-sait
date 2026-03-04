@@ -8,20 +8,20 @@ export default function WhyUs() {
     const advantages = [
         {
             id: 1,
-            title: "ТЕСТ",
-            short: "ь",
-            content: `
-      тест
-    `
+            title: "Центр карьеры и развития ",
+            short: "123",
+            content: "1"
+    
         },
         {
             id: 2,
             title: "Современные лаборатории",
             short: "Новейшее оборудование и ПО",
-            content: `
-      • Актуальные технологии
-      • Работа с реальными кейсами
-      • Практика с первого курса
+            content: `      
+        2
+        2
+        2
+        2
     `
         },
         {
@@ -29,13 +29,23 @@ export default function WhyUs() {
             title: "Будь среди первых",
             short: "Конкурсы и хакатоны",
             content: `
-      • Участие в IT-соревнованиях
-      • Командные проекты
-      • Портфолио во время обучения
+        3
+        3
+        3
+    `
+        },
+        {
+            id: 4,
+            title: "Будь среди первых",
+            short: "Конкурсы и хакатоны",
+            content: `
+        4
+        4
+        4
     `
         }
     ]
-    const [activeId, setActiveId] = useState(1);
+    const [activeId, setActiveId] = useState(2);
     const activeItem = advantages.find(item => item.id === activeId)
     return (
         <>
@@ -106,24 +116,44 @@ export default function WhyUs() {
                             Подробнее о наших преимуществах
                         </div>
                         <div className={styles.buttons}>
-                            <div onClick={() => setActiveId(1)} className={styles.b1}>кнопка</div>
-                            <div onClick={() => setActiveId(2)} className={styles.b1}>кнопка</div>
-                            <div onClick={() => setActiveId(3)} className={styles.b1}>кнопка</div>
-                            <div onClick={() => setActiveId(4)} className={styles.b1}>кнопка</div>
+                            <div onClick={() => setActiveId(1)} className={styles.b1}>Трудоустройство</div>
+                            <div onClick={() => setActiveId(2)} className={styles.b1}>Кабинеты</div>
+                            <div onClick={() => setActiveId(3)} className={styles.b1}>Доп. Образование</div>
+                            <div onClick={() => setActiveId(4)} className={styles.b1}>Мероприятия</div>
+                        </div>
+                        <div className={styles.TEXT}>
+                            <div className={styles.content}>
+                                <div className={styles.title}>
+                                    {activeItem?.title}
+                                </div>
+                                <div className={styles.content}>
+                                    {activeItem?.content}
+                                </div>
+                            </div>
                         </div>
 
-                        <div className={styles.content}>
-                            <div className="title">
-                                {activeItem?.title}
-                            </div>
-                            <div className="contend">
-                                {activeItem?.content}
-                            </div>
-                        </div>
                     </div>
                 </div>
 
 
+            </div>
+            <div className={styles.section1}>
+                <div className={styles.container}>
+                    <div className={styles.us}>
+                         Твоя карьера начинается здесь.
+                    </div>
+                    <div className={styles.p1}>
+                        Приемная комиссия уже ждет тебя! <br />
+                        Записывайся на онлайн-курсы или приходи на ближайший день <br/>
+                        открытых дверей, чтобы узнать больше о том, как IT.Москва может стать твоим трамплином в мир IT.
+                    </div>
+                    <a href="https://vk.com/@itmoscowprivet-itmoskva-school" className={styles.bth1}>
+                        Онлайн курсы
+                    </a>
+                    <a href="https://vk.com/@itmoscowprivet-dod" className={styles.bth2}>
+                        День открытых дверей
+                    </a>
+                </div>
             </div>
         </>
     )
