@@ -1,7 +1,42 @@
 import styles from './Whyus.module.css'
 import Navigation from '../components/Navigation'
+import { useState } from 'react';
+
+
 
 export default function WhyUs() {
+    const advantages = [
+        {
+            id: 1,
+            title: "ТЕСТ",
+            short: "ь",
+            content: `
+      тест
+    `
+        },
+        {
+            id: 2,
+            title: "Современные лаборатории",
+            short: "Новейшее оборудование и ПО",
+            content: `
+      • Актуальные технологии
+      • Работа с реальными кейсами
+      • Практика с первого курса
+    `
+        },
+        {
+            id: 3,
+            title: "Будь среди первых",
+            short: "Конкурсы и хакатоны",
+            content: `
+      • Участие в IT-соревнованиях
+      • Командные проекты
+      • Портфолио во время обучения
+    `
+        }
+    ]
+    const [activeId, setActiveId] = useState(1);
+    const activeItem = advantages.find(item => item.id === activeId)
     return (
         <>
             <Navigation />
@@ -13,56 +48,82 @@ export default function WhyUs() {
                     <p className={styles.p1} >
                         <span className={styles.p} >IT МОСКВА</span> — Твой апгрейд из студента в профи.<br />Здесь ты получишь не просто «корочку», а востребованную <br /> профессию, окружение единомышленников и прямой выход на <br /> работодателей Москвы.
                     </p>
-                    
+
                 </div>
                 <div className={styles.card_block}>
-                        <div className={styles.block}>
-                            <h2 className={styles.num}>100%</h2>
-                            <p className={styles.text}>
-                                ГАРАНТИЯ:<br />
-                                Государственный диплом<br />
-                                и отсрочка от армии.<br />
-                            </p>
+                    <div className={styles.block}>
+                        <h2 className={styles.num}>100%</h2>
+                        <p className={styles.text}>
+                            ГАРАНТИЯ:<br />
+                            Государственный диплом<br />
+                            и отсрочка от армии.<br />
+                        </p>
+                    </div>
+                    <div className={styles.block}>
+                        <h2 className={styles.num}>70%</h2>
+                        <p className={styles.text}>
+                            ПРАКТИКИ:<br />
+                            Минимум теории, максимум работы<br />
+                            в лабораториях и мастерских.<br />
+                        </p>
+                    </div>
+                    <div className={styles.block}>
+                        <h2 className={styles.num}>15+</h2>
+                        <p className={styles.text}>
+                            ПАРТНЕРОВ:<br />
+                            Прямые связи и отсрочка от армии<br />
+                            с ведущими IT-компаниями<br />
+                            и госсектором.<br />
+                        </p>
+                    </div>
+                    <div className={styles.block}>
+                        <h2 className={styles.num}>вТОП-10</h2>
+                        <p className={styles.text}>
+                            Входим в рейтинги лучших<br />
+                            колледжей Москвы по качеству<br />
+                            подготовки.<br />
+                        </p>
+                    </div>
+                    <div className={styles.block}>
+                        <h2 className={styles.num}>10+</h2>
+                        <p className={styles.text}>
+                            Кружков:<br />
+                            Развивайся не только в коде.<br />
+                        </p>
+                    </div>
+                    <div className={styles.block}>
+                        <h2 className={styles.num}>30+</h2>
+                        <p className={styles.text}>
+                            Побед на федеральном уровне<br />
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div className={styles.section1}>
+                <div className={styles.z}>
+                    <div className={styles.container}>
+                        <div className={styles.header}>
+                            Подробнее о наших преимуществах
                         </div>
-                        <div className={styles.block}>
-                            <h2 className={styles.num}>70%</h2>
-                            <p className={styles.text}>
-                                ПРАКТИКИ:<br />
-                                Минимум теории, максимум работы<br />
-                                в лабораториях и мастерских.<br />
-                            </p>
+                        <div className={styles.buttons}>
+                            <div onClick={() => setActiveId(1)} className={styles.b1}>кнопка</div>
+                            <div onClick={() => setActiveId(2)} className={styles.b1}>кнопка</div>
+                            <div onClick={() => setActiveId(3)} className={styles.b1}>кнопка</div>
+                            <div onClick={() => setActiveId(4)} className={styles.b1}>кнопка</div>
                         </div>
-                        <div className={styles.block}>
-                            <h2 className={styles.num}>15+</h2>
-                            <p className={styles.text}>
-                                ПАРТНЕРОВ:<br />
-                                Прямые связи и отсрочка от армии<br />
-                                с ведущими IT-компаниями<br />
-                                и госсектором.<br />
-                            </p>
-                        </div>
-                        <div className={styles.block}>
-                            <h2 className={styles.num}>вТОП-10</h2>
-                            <p className={styles.text}>
-                                Входим в рейтинги лучших<br />
-                                колледжей Москвы по качеству<br />
-                                подготовки.<br />
-                            </p>
-                        </div>
-                        <div className={styles.block}>
-                            <h2 className={styles.num}>10+</h2>
-                            <p className={styles.text}>
-                                Кружков:<br />
-                                Развивайся не только в коде.<br />
-                            </p>
-                        </div>
-                        <div className={styles.block}>
-                            <h2 className={styles.num}>30+</h2>
-                            <p className={styles.text}>
-                                Побед на федеральном уровне<br />
-                            </p>
+
+                        <div className={styles.content}>
+                            <div className="title">
+                                {activeItem?.title}
+                            </div>
+                            <div className="contend">
+                                {activeItem?.content}
+                            </div>
                         </div>
                     </div>
+                </div>
+
+
             </div>
         </>
     )
