@@ -27,7 +27,7 @@ export default function Footer() {
             <div className={styles.socials}>
               <a
                 className={styles.socialBtn}
-                href="https://vk.com"
+                href="https://vk.com/it.moscowpro"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="VK"
@@ -37,7 +37,7 @@ export default function Footer() {
 
               <a
                 className={styles.socialBtn}
-                href="https://t.me"
+                href="https://t.me/it.moscow1"
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Telegram"
