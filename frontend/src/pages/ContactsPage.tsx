@@ -60,7 +60,7 @@ export default function ContactsPage() {
 
                         <div className={styles.contact_item}>
                             <span className={styles.label}>Телефон</span>
-                            <a href="tel:+79853320839" className={`${styles.value} ${styles.link}`}>
+                            <a href="tel:+79268153534" className={`${styles.value} ${styles.link}`}>
                                 +7 (926) 815-35-34
                             </a>
                         </div>
@@ -91,7 +91,7 @@ export default function ContactsPage() {
 
                         <div className={styles.contact_item}>
                             <span className={styles.label}>Телефон</span>
-                            <a href="tel:+79853320839" className={`${styles.value} ${styles.link}`}>
+                            <a href="tel:+79850175192" className={`${styles.value} ${styles.link}`}>
                                 +7 (985) 017-51-92
                             </a>
                         </div>
@@ -122,7 +122,7 @@ export default function ContactsPage() {
 
                         <div className={styles.contact_item}>
                             <span className={styles.label}>Телефон</span>
-                            <a href="tel:+79853320839" className={`${styles.value} ${styles.link}`}/>
+                            <a href="tel:+79257596092" className={`${styles.value} ${styles.link}`}/>
                                 +7 (925) 759-60-92
                         </div>
 
