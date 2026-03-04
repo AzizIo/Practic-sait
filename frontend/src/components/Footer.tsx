@@ -53,7 +53,7 @@ export default function Footer() {
               <ul className={styles.list}>
                 {COLLEGE_LINKS.map((x) => (
                   <li key={x.label}>
-                    <a className={styles.link} href={x.href}>
+                    <a className={styles.link} target="_blank" href={x.href}>
                       {x.label}
                     </a>
                   </li>
