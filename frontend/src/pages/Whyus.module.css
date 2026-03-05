@@ -142,6 +142,7 @@
 
 
 .TEXT {
+    display: flex;
     margin-left: 56px;
     max-width: 1550px;
     margin-top: 100px;
@@ -215,4 +216,34 @@
 
 .c {
     height: 1500px;
+}
+
+
+.image{
+    width: 650px; 
+    height: auto; 
+    border-radius: 10px; 
+    margin-left: 70px;
+}
+
+.list{
+list-style:none;
+padding:0;
+display:flex;
+flex-direction:column;
+gap:16px;
+}
+
+.list li{
+font-size:20px;
+position:relative;
+padding-left:30px;
+}
+
+.list li::before{
+content:"✔";
+position:absolute;
+left:0;
+color:#4a52ff;
+font-weight:700;
 }

@@ -1,73 +1,74 @@
 import styles from './Whyus.module.css'
 import Navigation from '../components/Navigation'
 import { useState } from 'react';
+import event from "../assets/events.jpg"
 
 
 
 export default function WhyUs() {
     const advantages = [
-  {
-    id: 1,
-    title: "Центр карьеры и развития",
-    short: "Трудоустройство",
-    description:
-      "Мы сопровождаем студентов от первого курса до выхода на работу.",
-    checklist: [
-      "Индивидуальные консультации с карьерным экспертом", <br />,,
-      "Помощь в создании резюме и портфолио", <br />,
-      "Подготовка к собеседованиям",<br />,
-      "Стажировки в компаниях-партнёрах",<br />,
-      "Мастер-классы от действующих специалистов", <br />,
-    ],
-    image: "/images/career.jpg"
-  },
+        {
+            id: 1,
+            title: "Центр карьеры и развития",
+            short: "Трудоустройство",
+            description:
+                "Мы сопровождаем студентов от первого курса до выхода на работу.",
+            checklist: [
+                "Индивидуальные консультации с карьерным экспертом",
+                "Помощь в создании резюме и портфолио", 
+                "Подготовка к собеседованиям",
+                "Стажировки в компаниях-партнёрах", 
+                "Мастер-классы от действующих специалистов", 
+            ],
+            image: event
+        },
 
-  {
-    id: 2,
-    title: "Современные лаборатории",
-    short: "Кабинеты",
-    description:
-      "Обучение проходит на современном оборудовании с использованием актуального ПО.",
-    checklist: [
-      "Компьютерные классы с профессиональным софтом",
-      "Практика на реальных проектах",
-      "Оборудование последнего поколения",
-      "Доступ к лабораториям вне учебных занятий"
-    ],
-    image: "/images/labs.jpg"
-  },
+        {
+            id: 2,
+            title: "Современные лаборатории",
+            short: "Кабинеты",
+            description:
+                "Обучение проходит на современном оборудовании с использованием актуального ПО.",
+            checklist: [
+                "Компьютерные классы с профессиональным софтом", 
+                "Практика на реальных проектах",
+                "Оборудование последнего поколения",
+                "Доступ к лабораториям вне учебных занятий"
+            ],
+            image: "/images/labs.jpg"
+        },
 
-  {
-    id: 3,
-    title: "Дополнительное образование",
-    short: "Доп. образование",
-    description:
-      "Мы даём больше, чем стандартную программу обучения.",
-    checklist: [
-      "Хакатоны и IT-соревнования",
-      "Проектная деятельность",
-      "Работа в командах",
-      "Развитие soft skills",
-      "Подготовка к олимпиадам"
-    ],
-    image: "/images/education.jpg"
-  },
+        {
+            id: 3,
+            title: "Дополнительное образование",
+            short: "Доп. образование",
+            description:
+                "Мы даём больше, чем стандартную программу обучения.",
+            checklist: [
+                "Хакатоны и IT-соревнования",
+                "Проектная деятельность",
+                "Работа в командах",
+                "Развитие soft skills",
+                "Подготовка к олимпиадам"
+            ],
+            image: "/images/education.jpg"
+        },
 
-  {
-    id: 4,
-    title: "Студенческая жизнь и мероприятия",
-    short: "Мероприятия",
-    description:
-      "Активная студенческая жизнь и возможности для самореализации.",
-    checklist: [
-      "Форумы и конференции", <br />,
-      "Встречи с представителями компаний",
-      "Клубы по интересам",
-      "Волонтёрские программы"
-    ],
-    image: "/images/events.jpg"
-  }
-]
+        {
+            id: 4,
+            title: "Студенческая жизнь и мероприятия",
+            short: "Мероприятия",
+            description:
+                "Активная студенческая жизнь и возможности для самореализации.",
+            checklist: [
+                "Форумы и конференции", 
+                "Встречи с представителями компаний",
+                "Клубы по интересам",
+                "Волонтёрские программы"
+            ],
+            image: "/images/events.jpg"
+        }
+    ]
     const [activeId, setActiveId] = useState(2);
     const activeItem = advantages.find(item => item.id === activeId)
     return (
@@ -152,11 +153,28 @@ export default function WhyUs() {
 
                     </div>
                     <div key={activeId} className={styles.TEXT}>
-                        <div className={styles.title}>
-                            {activeItem?.title}
+                        <div className="left">
+                            <div className={styles.title}>
+                                {activeItem?.title}
+                            </div>
+
+                            <div className={styles.description}>
+                                {activeItem?.description}
+                            </div>
+                            <div className={styles.content}>
+                                <ul className={styles.list}>
+                                    {activeItem?.checklist.map((item, index) => (
+                                        <li key={index} className={styles.item}>
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
+                            </div>
                         </div>
-                        <div className={styles.content}>
-                            {activeItem?.checklist}
+                        <div className="right">
+                            <div className={styles.image}>
+                                <img className={styles.image} src={activeItem?.image} alt={activeItem?.title} />
+                            </div>
                         </div>
                     </div>
                 </div>
