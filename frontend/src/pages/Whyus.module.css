@@ -170,6 +170,20 @@
     }
 }
 
+.description{
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: fadeIn 1s ease forwards;
+
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .content {
     opacity: 0;
     transform: translateX(-50px);
@@ -195,7 +209,8 @@
     color: #fff;
     font-size: 24px;
     font-weight: 800;
-    background: linear-gradient(90deg, #020039, #362fff);
+    background: linear-gradient(135deg, #0702A4, #B9B7FF);
+    
 }
 
 .bth2 {
@@ -207,7 +222,8 @@
     color: #fff;
     font-size: 24px;
     font-weight: 800;
-    background: linear-gradient(90deg, #020039, #362fff);
+    background: linear-gradient(135deg, #0702A4, #B9B7FF);
+    
 }
 
 .x {
@@ -223,7 +239,7 @@
     width: 650px; 
     height: auto; 
     border-radius: 10px; 
-    margin-left: 70px;
+    margin-left: 10px;
 }
 
 .list{
@@ -247,3 +263,4 @@ left:0;
 color:#4a52ff;
 font-weight:700;
 }
+
