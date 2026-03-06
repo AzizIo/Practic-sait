@@ -2,9 +2,10 @@ import styles from './Whyus.module.css'
 import Navigation from '../components/Navigation'
 import { useState } from 'react';
 import event from "../assets/events.jpg"
-
-
-
+import lab from "../assets/lab.jpg"
+import ev from "../assets/ev.jpg"
+import tr from "../assets/tr.jpg"
+import vd from "../assets/vd.MP4"
 export default function WhyUs() {
     const advantages = [
         {
@@ -20,7 +21,7 @@ export default function WhyUs() {
                 "Стажировки в компаниях-партнёрах", 
                 "Мастер-классы от действующих специалистов", 
             ],
-            image: event
+            image: tr
         },
 
         {
@@ -35,7 +36,7 @@ export default function WhyUs() {
                 "Оборудование последнего поколения",
                 "Доступ к лабораториям вне учебных занятий"
             ],
-            image: "/images/labs.jpg"
+            image: lab
         },
 
         {
@@ -51,7 +52,7 @@ export default function WhyUs() {
                 "Развитие soft skills",
                 "Подготовка к олимпиадам"
             ],
-            image: "/images/education.jpg"
+            image: event
         },
 
         {
@@ -66,7 +67,7 @@ export default function WhyUs() {
                 "Клубы по интересам",
                 "Волонтёрские программы"
             ],
-            image: "/images/events.jpg"
+            image: ev
         }
     ]
     const [activeId, setActiveId] = useState(2);
@@ -180,6 +181,24 @@ export default function WhyUs() {
                 </div>
 
 
+            </div>
+
+            <div className={styles.ex}>
+
+            <div className={styles.section1}>
+                <div className={styles.x}>
+
+                <div className={styles.container}>
+                    
+                    <div className={styles.header}>
+                        Виртуальная экскурсия
+                    </div>
+                    <div className={styles.vd}>
+                        <video className={styles.vd} src={vd} controls></video>
+                    </div>
+                </div>
+                </div>
+            </div>
             </div>
             <div className={styles.section1}>
                 <div className={styles.x}>
